@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-primary: #F2F2F2;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 1920px;
+	width: 100%;
+
+	font-family: 'Josefin Sans', sans-serif;
+	background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996) no-repeat;
+		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+	box-shadow: none;
+}
+
+/* стили навигации */
+.navbar {
+	height: 10vh;
+	width: 100%;
+	z-index: 99;
+	position: absolute;
+
+	background-color: rgba(0, 0, 0, 0.5);;
+}
+
+.navbar__container {
+	height: 10vh;
+	width: 100%; /*это обязательно???*/
+
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	max-width: 5%;
+}
+
+.navbar__wrapper {
+	padding: 0 5%;
+}
+
+.menu {
+	border: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu__item {
+	padding: 15px;
+	list-style-type: none;
+}
+
+.menu__link {
+	text-decoration: none;
+	font-size: 30px;
+	color: var(--color-primary);
+	opacity: 0.8;
+}
+
+.menu__link :hover {
+	cursor: pointer;
+	color: #344;
+	transition: ease 0.5s;
+}
+
+/* стили раскрывающегося меню */
+
+.sub-menu {
+	position: absolute;
+	min-width: 100px;
+	
+	background-color: var(--color-primary);
+	box-shadow: 1px 1px 1px #344;
+
+	border-radius: 5%;
+	opacity: 0.8;
+	display: none;
+}
+
+ .menu__dropdown:hover .sub-menu {
+	display: block;
+}
+
+.sub-menu__item {
+	padding: 10px 40px 10px 5px;
+	list-style-type: none;
+}
+
+.sub-menu__link {
+	text-decoration: none;
+	font-size: 30px;
+	color: #344;
+	opacity: 0.8;
+}
+
+.sub-menu__link:hover {
+	cursor: pointer;
+	color: #000;
+	transition: ease 0.5s;
+}
+
+.menu__booking--active {
+	background-color: #fff8db;
+	color: #344;
+	padding: 10px;
+}
+
+.menu__booking--active:hover {
+	color: #000;
+	transition: ease 0.5s;
+}
+
+/* стили header контента */
+
+.header__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+
+	width: 100%;
+	margin-top: 20vh;
+}
+
+.header__title {
+	color: var(--color-primary);
+	font-size: 10vh;
+
+}
+
+.header__img {
+	max-width: 1920px;
+	opacity: 0.8;
+	width: 100%;
+
+	display: block;
+	position: relative;
+	overflow: clip;
+	z-index: -1;
+}
